@@ -1,0 +1,55 @@
+Entity Relationship Diagram (ERD)
+
+1. USERS
+   - user_id (PK)
+   - username
+   - email
+   - ... (other fields)
+
+2. TYPES
+   - type_id (PK)
+   - type_name
+   - ... (other fields)
+
+3. POKEMON
+   - pokemon_id (PK)
+   - name
+   - type_id (FK)
+   - ... (other fields)
+
+4. MOVES
+   - move_id (PK)
+   - move_name
+   - type_id (FK)
+   - ... (other fields)
+
+5. ABILITIES
+   - ability_id (PK)
+   - ability_name
+   - ... (other fields)
+
+6. TEAMS
+   - team_id (PK)
+   - team_name
+   - user_id (FK)
+   - ... (other fields)
+
+7. TEAM_MEMBERS
+   - team_member_id (PK)
+   - team_id (FK)
+   - pokemon_id (FK)
+   - ... (other fields)
+
+8. BATTLES
+   - battle_id (PK)
+   - team_id (FK)
+   - opponent_id (FK)
+   - winner_id (FK)
+   - ... (other fields)
+
+Relationships:
+- USERS can have multiple TEAMS (1 to Many)
+- TEAMS can have multiple TEAM_MEMBERS (1 to Many)
+- POKEMON can have multiple MOVES (1 to Many)
+- POKEMON can have multiple ABILITIES (1 to Many)
+- BATTLES involve two TEAMS (Many to Many)
